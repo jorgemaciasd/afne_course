@@ -1,0 +1,14 @@
+---
+# Push templated configs to Routers
+
+- hosts: CSR_Routers
+
+  tasks:
+
+    - name: Push config from configs folder
+      ios_config:
+        src: "/etc/ansible/afne/configs/{{inventory_hostname}}.txt"
+
+    - name: Save the config
+      ios_config:
+        save_when: always
