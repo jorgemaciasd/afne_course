@@ -1,0 +1,12 @@
+---
+#Default connectivity variables
+ansible_user: "jmacias"
+ansible_ssh_pass: "12345aA"
+ansible_network_os: "ios"
+ansible_connection: "network_cli"
+
+
+# Global config variables (for Jinja2 templates)
+
+ntp:
+  server1: 10.10.10.10

@@ -1,0 +1,5 @@
+---
+ # NXOS-2 Specific Connectivity Information
+
+  hostname:
+      name: {{inventory_hostname}}

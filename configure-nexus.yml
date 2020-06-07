@@ -1,0 +1,17 @@
+---
+## Playbook to configure things on Cisco Nexus
+
+- hosts: nxos
+
+  tasks:
+ #   - name: Configure a single command on Nexus
+ #     nxos_config:
+ #       lines: ntp server 192.168.1.1 use-vrf default
+ #       save_when: modified
+
+    - name: Configure Nexus hostnames
+      nxos_config:
+        lines: hostname {{ hostname.name }}
+        
+        
+        save_when: modified

@@ -1,0 +1,15 @@
+---
+## Playbook to Backup configs
+
+- hosts: CSR_Routers
+
+  tasks:
+   - name: Backup config
+     ios_command:
+       commands: show run
+     register: config
+
+   - name: Save output to /afne/backups/
+     copy:
+       content: "{{config.stdout[0]}}"
+       dest: "/etc/ansible/afne/backups/{{inventory_hostname}}-backup.txt"

@@ -1,0 +1,225 @@
+Building configuration...
+
+Current configuration : 4200 bytes
+!
+! Last configuration change at 08:23:49 UTC Sat Jun 6 2020
+!
+version 16.6
+service timestamps debug datetime msec
+service timestamps log datetime msec
+platform qfp utilization monitor load 80
+no platform punt-keepalive disable-kernel-core
+platform console serial
+!
+hostname CSR1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+no login on-success log
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+! 
+! 
+! 
+! 
+!
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-1558922601
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-1558922601
+ revocation-check none
+ rsakeypair TP-self-signed-1558922601
+!
+!
+crypto pki certificate chain TP-self-signed-1558922601
+ certificate self-signed 01
+  30820330 30820218 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 31353538 39323236 3031301E 170D3230 30353331 31373538 
+  31355A17 0D333030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D31 35353839 
+  32323630 31308201 22300D06 092A8648 86F70D01 01010500 0382010F 00308201 
+  0A028201 0100AA5C A72CDE7C 8FAFE128 45D4AE7C BCE1BCB1 DBF99DE7 1CF7E70C 
+  25A54AF7 B1A6B93C 4182023C FAEA538A BA66CC50 D1850DCD 6DFFC19F CAE25471 
+  853D4AFE A60AC827 253A0F30 5D346723 D2FA7E9B BBC1F019 74DE024F 58415ECD 
+  94D7EE4C ED2063E6 C7E4E06C 419133EF 74D89206 B676E250 20AB65EB 0524D0AC 
+  81154769 20D21957 5792CCB3 F2AC1515 9B2304C9 D5D708FB 163FAB85 BFC4F794 
+  5C650751 AD320B2D B4E8444A 9886DACC D8548A79 A73DA425 228BEFAF 9674CEB4 
+  E0500D39 EF58A730 3D0FA16A 378225E5 8D9D1DB2 AA1A87D3 969A5D7D 3B5CAE28 
+  CE7701E4 9665B1DA 110BEED3 C80EB530 3D236257 71A25AA2 4D55A1D7 2CB63CBC 
+  BD223F82 63F50203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 
+  301F0603 551D2304 18301680 14249FA7 13E1AA3C 5495696A 4868EE47 5DF71438 
+  FD301D06 03551D0E 04160414 249FA713 E1AA3C54 95696A48 68EE475D F71438FD 
+  300D0609 2A864886 F70D0101 05050003 82010100 667A5C71 17EE2879 39113927 
+  898208B5 F96503B2 16DDC848 9B4041AA EF4622AE AC1AAD86 C2471322 922BAE83 
+  700E5F00 7C9F521F 88572625 0041EDC3 7007F740 087D50CB 94473899 489D08F1 
+  9751DBF5 FE6DBBFF 66D31BB9 D1B2F4EB 7EF784B5 FB07D353 CBAA1372 CE516940 
+  4666B74E 53952CA9 3744A1E4 8574A38D 876D0EE2 519D8C75 701C264F 4C40F8D1 
+  BFCD04DB 8228A433 FB8CA3CD 78F9C5EF BE5CF8FF 215941AF F180C42B E05F5348 
+  CCF12DBC 1B36C041 6C78FFA1 FD4D4F74 221DE002 2C5DB5E1 9E5B3169 2F4E72DB 
+  8E9120F8 E6BE65EE 19FE61B0 415D4241 AD6BD51A D3BA5DDA CC425392 BA792116 
+  35F97A14 B624B6C9 429242F3 5E1766D1 793F2C5B
+  	quit
+!
+!
+!
+!
+!
+!
+!
+!
+!
+license udi pid CSR1000V sn 92K8QL7THQP
+diagnostic bootup level minimal
+spanning-tree extend system-id
+!
+!
+!
+username jmacias privilege 15 password 0 12345aA
+!
+redundancy
+!
+!
+!
+!
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+! 
+! 
+!
+!
+interface GigabitEthernet1
+ ip address 192.168.1.245 255.255.255.0
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+interface GigabitEthernet2
+ no ip address
+ shutdown
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+interface GigabitEthernet3
+ no ip address
+ shutdown
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+interface GigabitEthernet4
+ no ip address
+ shutdown
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+interface GigabitEthernet5
+ no ip address
+ shutdown
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+interface GigabitEthernet6
+ no ip address
+ shutdown
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+interface GigabitEthernet7
+ no ip address
+ shutdown
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+interface GigabitEthernet8
+ no ip address
+ shutdown
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+!
+virtual-service csr_mgmt
+!
+ip forward-protocol nd
+ip http server
+ip http authentication local
+ip http secure-server
+ip http client source-interface GigabitEthernet1
+!
+ip ssh version 2
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+line con 0
+ logging synchronous
+ login local
+ stopbits 1
+line vty 0 5
+ logging synchronous
+ login local
+!
+ntp server 34.208.249.133
+!
+!
+!
+!
+!
+!
+pnp profile pnp_cco_profile
+ transport https ipv4 18.205.167.7 port 443
+end

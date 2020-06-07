@@ -1,0 +1,24 @@
+---
+## Playbook to configure things
+
+- hosts: CSR_Routers
+
+  tasks:
+  #  - name: Configure a single command
+   #   ios_config:
+    #    lines: 
+     #     - ntp server 192.168.1.1
+      #    - no ntp server 34.208.249.133
+       #   - wr mem
+    - name: Configure multiple lines of code from text file
+      ios_config:
+        src: "/etc/ansible/afne/configs/config1.txt"
+    
+    - name: Configure from Jinja2 Template
+      ios_config:
+        src: "/etc/ansible/afne/configure1.j2"
+
+
+    - name: Save config
+      ios_config:
+        save_when: always

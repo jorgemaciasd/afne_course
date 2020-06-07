@@ -1,0 +1,5 @@
+---
+ # CSR-2 Specific Connectivity Information
+
+  hostname:
+      name: CSR-2
