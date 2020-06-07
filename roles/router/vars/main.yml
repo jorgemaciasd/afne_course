@@ -1,9 +1,9 @@
 ---
 routers:
-  - hostname: CSR1
+  - hostname: CSR-1
     loopbackip: 1.1.1.1 255.255.255.255
     loopback1ip: 10.10.10.10 255.255.255.255
   
-  - hostname: CSR2
+  - hostname: CSR-2
     loopbackip: 2.2.2.2 255.255.255.255
     loopback1ip: 20.20.20.20 255.255.255.255
