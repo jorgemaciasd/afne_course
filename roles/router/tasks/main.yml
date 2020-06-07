@@ -1,0 +1,4 @@
+---
+- name: Generate Configuraion File from Template
+  template: src=router.j2 dest=/etc/ansible/afne/configs/{{item.hostname}}.txt
+  with_items: "{{routers}}"
